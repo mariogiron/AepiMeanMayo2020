@@ -1,0 +1,9 @@
+GET http://localhost:3000
+
+###
+
+PUT http://localhost:3000/otraurl
+
+###
+
+PATCH http://localhost:3000
