@@ -1,0 +1,60 @@
+extends layout.pug
+
+block contenido
+    h1 Cabecera de Home
+    div
+        p Párrafo dentro de DIV
+    div#segundo
+        a(href="http://www.google.es", target="_blank", class="activo") Google.es
+        a.activo.enlace(href="http://www.asociacionaepi.es") AEPI.es
+    .tercero
+        //- Jerarquía HTML
+        ul
+            li Uno
+            li Dos
+            li Tres
+    .cuarto
+        //- Mostrar variables del controlador
+        p= clients
+        p Número de clientes #{clients}
+        p= arrClientes.length
+    .quinto
+        //- Case - When
+        case clients
+            when 0
+                p No tienes clientes
+            when 1
+                p Tienes 1 cliente
+            default
+                p Tienes #{clients} clientes
+    .sexto
+        //- Condicionales
+        if arrClientes.length > 0
+            p Tienes algún cliente
+        else
+            p No tienes clientes
+    .septimo
+        //- Iterador EACH
+        ul
+            each cliente, index in arrClientes
+                li #{index} - #{cliente.nombre}
+            else
+                li No hay clientes
+        table
+            thead
+                tr
+                    th Nombre
+                    th Apellidos
+                    th Núm Cliente
+            tbody
+                each cliente in arrClientes
+                    tr
+                        td= cliente.nombre
+                        td= cliente.apellidos
+                        td= cliente.numClient
+                else
+                    tr
+                        td(colspan="3") No hay clientes
+        ul
+            - for(let i = 0; i<arrClientes.length; i++)
+                li= arrClientes[i].nombre
