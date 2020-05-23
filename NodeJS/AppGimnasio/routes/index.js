@@ -16,7 +16,10 @@ router.get('/home', (req, res) => {
 });
 
 router.get('/contact', (req, res) => {
-  res.render('contact');
+
+  res.render('contact', {
+    numeros: [1, 4, 12, 56, 33, 89]
+  });
 });
 
 module.exports = router;

@@ -1,0 +1,23 @@
+extends ../nuevoLayout.pug
+
+block contenido    
+    h3.my-5 Nuevo cliente
+    .row
+        .col-md-6.offset-md-3.col-12.offset-0
+            form(action="/clients/create", method="POST")
+                .form-group
+                    label Nombre
+                    input.form-control(type="text", name="nombre")
+                .form-group
+                    label Apellidos
+                    input.form-control(type="text", name="apellidos")
+                .form-group
+                    label Email
+                    input.form-control(type="text", name="email")
+                .form-group
+                    label Teléfono
+                    input.form-control(type="text", name="telefono")
+                .form-group
+                    label Dirección
+                    input.form-control(type="text", name="direccion")
+                input.btn.btn-info.btn-block(type="submit", value="Enviar")

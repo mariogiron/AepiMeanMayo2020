@@ -1,5 +1,32 @@
 extends layout.pug
 
+mixin lista(coleccion)
+    ul
+        each val in coleccion
+            li= val
+        else
+            li No hay elementos en esta colección
+
 block contenido
     h2 Página de contacto
     h3 Deja tus datos
+    .container
+        .row
+            .col-6
+                +lista(numeros)
+                +lista([])
+            .col-6
+                +lista(['hola', 'adios', 'hasta luego'])
+    p
+        | Texto plano que aparece dentro del párrafo
+    script.
+        console.log('Hola Mundo');
+        if(true){
+            console.log('Entra en TRUE');
+        }
+        $(document).ready(()=>{
+            console.log('Estamos ready!');
+        });
+
+block footer
+    p Pie de página de contacto
