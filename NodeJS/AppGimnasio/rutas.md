@@ -5,11 +5,14 @@ GET /info
 
 **routes/clients.js**
 X GET /clients (index.pug) - Recupera todos los clientes y me los muestra en una tabla
-GET /clients/7812 - Recupera el cliente con el id especificado
+X GET /clients/7812 - Recupera el cliente con el id especificado
 X GET /clients/new (formulario.pug) - Formulario para insertar un nuevo cliente
-POST /clients/create - Gestiona la creación de un nuevo cliente
+X POST /clients/create - Gestiona la creación de un nuevo cliente
 GET /clients/edit - Formulario para editar un cliente
+POST /clients/update - Gestiona la actualización de un cliente
 GET /clients/remove - Borrar un cliente
+
+CRUD - Create, Read, Update, Delete
 
 **routes/class.js**
 GET /class (index.pug) - Recupera todas las clases disponibles

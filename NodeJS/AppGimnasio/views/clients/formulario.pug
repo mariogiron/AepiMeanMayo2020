@@ -7,17 +7,20 @@ block contenido
             form(action="/clients/create", method="POST")
                 .form-group
                     label Nombre
-                    input.form-control(type="text", name="nombre")
+                    input.form-control(type="text", name="name")
                 .form-group
                     label Apellidos
-                    input.form-control(type="text", name="apellidos")
+                    input.form-control(type="text", name="surname")
                 .form-group
                     label Email
                     input.form-control(type="text", name="email")
                 .form-group
-                    label Teléfono
-                    input.form-control(type="text", name="telefono")
+                    label Edad
+                    input.form-control(type="number", name="age")
                 .form-group
-                    label Dirección
-                    input.form-control(type="text", name="direccion")
+                    label Activo
+                    input.form-control(type="checkbox", name="active")
+                .form-group
+                    label Código Postal
+                    input.form-control(type="text", name="zip")
                 input.btn.btn-info.btn-block(type="submit", value="Enviar")

@@ -1,4 +1,26 @@
 extends ../nuevoLayout.pug
 
 block contenido
-    h3 Todos los clientes
+    h3.my-5 Todos los clientes
+    table.table
+        thead
+            tr
+                th Name
+                th Surname
+                th Email
+                th Age
+                th Active
+                th Zip
+                th Actions
+        tbody
+            each client in clients
+                tr
+                    td= client.name
+                    td= client.surname
+                    td= client.email
+                    td= client.age
+                    td= client.active
+                    td= client.zip
+                    td
+                        a.btn.btn-primary.btn-sm(href="/clients/"+client.id) Detalle
+                        

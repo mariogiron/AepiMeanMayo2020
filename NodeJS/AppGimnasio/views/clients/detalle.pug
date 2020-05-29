@@ -1,0 +1,10 @@
+extends ../nuevoLayout
+
+block contenido
+    h3.my-5 Detalle del Cliente
+    p Nombre: #{client.name}
+    p Apellidos: #{client.surname}
+    p Email: #{client.email}
+    p Edad: #{client.age}
+    p Activo: #{client.active ? 'SÍ' : 'NO'}
+    p CP: #{client.zip}1
