@@ -1,0 +1,31 @@
+GET http://localhost:3000/api/clients
+
+###
+POST http://localhost:3000/api/clients
+Content-Type: application/json
+
+{
+    "name": "Laura",
+    "surname": "Marquez",
+    "email": "laura@gmail.com",
+    "age": 32,
+    "active": true,
+    "zip": 28030
+}
+
+###
+PUT http://localhost:3000/api/clients
+Content-Type: application/json
+
+{
+    "id": "5ed15031a7e90d2d9191ab67",
+    "name": "Sara",
+    "surname": "Rodríguez",
+    "email": "sararod@gmail.com",
+    "age": 57,
+    "active": false,
+    "zip": 28009
+}
+
+###
+DELETE http://localhost:3000/api/clients/5ed23b79c1d610198d6eb796

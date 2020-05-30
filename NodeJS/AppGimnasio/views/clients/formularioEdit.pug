@@ -1,0 +1,24 @@
+extends ../nuevoLayout.pug
+
+block contenido    
+    h3.my-5 Nuevo cliente
+    .row
+        .col-md-6.offset-md-3.col-12.offset-0
+            form(action="/clients/update/", method="POST")
+                .form-group
+                    label Nombre
+                    input.form-control(type="text", name="name", value=client.name)
+                .form-group
+                    label Apellidos
+                    input.form-control(type="text", name="surname", value=client.surname)
+                .form-group
+                    label Email
+                    input.form-control(type="text", name="email", value=client.email)
+                .form-group
+                    label Edad
+                    input.form-control(type="number", name="age", value=client.age)
+                .form-group
+                    label Código Postal
+                    input.form-control(type="text", name="zip", value=client.zip)
+                input(type="hidden", name="id", value=client.id)
+                input.btn.btn-info.btn-block(type="submit", value="Enviar")
