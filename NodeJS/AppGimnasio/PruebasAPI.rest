@@ -1,4 +1,5 @@
 GET http://localhost:3000/api/clients
+User-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZWRhNjFhZTRmODMxNDNlYWE5NTk5MmEiLCJleHBpcmVkQXQiOjE1OTEzNzcwMDYsImlhdCI6MTU5MTM3NjEwNn0.PgILv1xBo_nStEQRhChYpaYq7fdW5jKnF7XB9fD2SoE
 
 ###
 POST http://localhost:3000/api/clients

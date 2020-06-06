@@ -1,0 +1,21 @@
+<div>
+    <input type="text" [(ngModel)]="texto" />
+    <p>{{ texto }}</p>
+    <button (click)="manejarClick()">Cambia Variable</button>
+</div>
+<div>
+    <div>
+        <label>Nombre</label>
+        <input type="text" [(ngModel)]="persona.nombre">
+    </div>
+    <div>
+        <label>Apellidos</label>
+        <input type="text" [(ngModel)]="persona.apellidos">
+    </div>
+    <div>
+        <label>Edad</label>
+        <input type="text" [(ngModel)]="persona.edad">
+    </div>
+    <button (click)="enviarFormulario()">Enviar</button>
+    {{ persona | json }}
+</div>

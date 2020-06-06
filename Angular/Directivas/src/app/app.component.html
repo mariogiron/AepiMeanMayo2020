@@ -1,0 +1,13 @@
+<app-semaforo></app-semaforo>
+<div>
+  <button (click)="cambiarColor('red')">Cambia Color Rojo</button>
+  <button (click)="cambiarColor('blue')">Cambia Color Azul</button>
+</div>
+<div>
+  <input type="text" [(ngModel)]="propiedadesParrafo.backgroundColor">
+  <input type="range" min="12" max="150" step="1" (input)="cambiarFuente($event)">
+</div>
+<p [ngStyle]="propiedadesParrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates delectus porro
+  ducimus
+  suscipit illo quae dolore veniam ea non, provident facere exercitationem pariatur laborum nam esse, cupiditate at
+  doloribus voluptas.</p>

@@ -4,10 +4,21 @@ const Client = require('../../models/client');
 
 // GET http://localhost:3000/api/clients
 router.get('/', (req, res) => {
+
+    console.log(req.userId);
+
     Client.find()
         .then(clients => res.json(clients))
         .catch(err => res.json({ error: err.message }));
 });
+
+// router.get('/', async (req, res) => {
+//     try {
+//         const clients = await Client.find()
+//     } catch (err) {
+
+//     }
+// });
 
 // POST http://localhost:3000/api/clients
 router.post('/', async (req, res) => {

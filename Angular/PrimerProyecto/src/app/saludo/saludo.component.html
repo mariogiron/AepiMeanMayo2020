@@ -1,0 +1,23 @@
+<h3>Saludo Component</h3>
+<p>NOMBRE: {{ nombre }}</p>
+<p>NÚMERO: {{ numero }}</p>
+<p>{{ 5 + 5 }}</p>
+<p>{{ mostrarCadena() }}</p>
+<p [id]="identificador">Otro párrafo</p>
+<p>
+    <button (click)="manejarClick()">PULSA!!</button>
+</p>
+<p>
+    <input type="text" (input)="manejarInput($event)">
+</p>
+<p>
+    <select (change)="manejarChange($event)">
+        <option value="es">España</option>
+        <option value="fr">Francia</option>
+        <option value="ge">Alemania</option>
+        <option value="gb">Gran Bretaña</option>
+    </select>
+</p>
+<p>
+    <input type="text" name="apellidos" id="inputApellidos" class="campo-texto">
+</p>
