@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class SemaforoComponent implements OnInit {
 
   color: string;
+  mostrar: boolean;
 
   constructor() {
     this.color = 'amarillo';
+    this.mostrar = true;
   }
 
   ngOnInit(): void {

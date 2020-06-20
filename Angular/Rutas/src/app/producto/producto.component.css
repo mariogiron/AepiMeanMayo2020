@@ -1,0 +1,10 @@
+.producto {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    border: 1px solid black;
+}
+
+.textos {
+    padding: 20px;
+}

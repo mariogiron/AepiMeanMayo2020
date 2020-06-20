@@ -1,0 +1,33 @@
+<button (click)="addEpisodio()">AGREGAR EPISODIO</button>
+<div class="episodios">
+    <div class="episodio" *ngFor="let episodio of arrEpisodios">
+        <h3>{{ episodio.title }}</h3>
+        <p>{{ episodio.director }}</p>
+    </div>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Director</th>
+            <th>Índice</th>
+            <th>Primera</th>
+            <th>Última</th>
+            <th>Par</th>
+            <th>Impar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let episodio of arrEpisodios; let indice = index; let primera = first; let ultima = last; let par = even; let impar = odd;"
+            [ngClass]="{ filaPar: par, filaImpar: !par }">
+            <td>{{ episodio.title }}</td>
+            <td>{{ episodio.director }}</td>
+            <td>{{ indice + 1 }}</td>
+            <td>{{ primera }}</td>
+            <td>{{ ultima }}</td>
+            <td>{{ par }}</td>
+            <td>{{ impar }}</td>
+            <td *ngIf="ultima"><button>Agregar más</button></td>
+        </tr>
+    </tbody>
+</table>

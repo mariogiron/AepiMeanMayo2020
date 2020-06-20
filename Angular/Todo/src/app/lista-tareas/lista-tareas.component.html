@@ -1,0 +1,17 @@
+<!-- <ul>
+    <li *ngFor="let tarea of tareas">
+        {{ tarea.titulo }}
+    </li>
+</ul> -->
+
+<div class="tareas">
+    <div class="tarea" *ngFor="let tarea of tareas"
+        [ngClass]="{ tareaCompleta: tarea.completa, tareaIncompleta: !tarea.completa }">
+        <h4>{{ tarea.titulo }}</h4>
+        <p>{{ tarea.descripcion }}</p>
+        <button class="btn btn-block" [ngClass]="{ 'btn-success': tarea.completa, 'btn-danger': !tarea.completa }"
+            (click)="onClick(tarea)">
+            {{ tarea.completa ? 'COMPLETA' : 'INCOMPLETA' }}
+        </button>
+    </div>
+</div>

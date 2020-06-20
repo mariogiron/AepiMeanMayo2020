@@ -1,0 +1,13 @@
+<h2>MENU</h2>
+<ul>
+    <li><a [routerLink]="['/informacion']" routerLinkActive="activa">Información</a></li>
+    <li><a [routerLink]="['/sobre']" routerLinkActive="activa">Sobre Mi</a></li>
+    <li><a [routerLink]="['/contacto']" routerLinkActive="activa">Contacto</a></li>
+    <li><a [routerLink]="['/producto']" routerLinkActive="activa">Producto</a></li>
+</ul>
+<router-outlet></router-outlet>
+<div class="botones">
+    <button (click)="onClick('/informacion')">Información</button>
+    <button (click)="onClick('/sobre')">Sobre</button>
+    <button (click)="onClick('/contacto')">Contacto</button>
+</div>

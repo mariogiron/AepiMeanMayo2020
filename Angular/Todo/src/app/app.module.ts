@@ -3,18 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { SemaforoComponent } from './semaforo/semaforo.component';
-import { EpisodiosComponent } from './episodios/episodios.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ListaTareasComponent } from './lista-tareas/lista-tareas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SemaforoComponent,
-    EpisodiosComponent
+    FormularioComponent,
+    ListaTareasComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
