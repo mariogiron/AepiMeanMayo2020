@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let prod of productos">
+        {{prod.nombre}} {{prod.precio}}
+    </li>
+</ul>
+TOTAL: {{ calcularTotal() }}

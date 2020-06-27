@@ -1,0 +1,23 @@
+.personajes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.personaje {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.vivo {
+    background-color: lightgreen;
+}
+
+.muerto {
+    background-color: tomato;
+}

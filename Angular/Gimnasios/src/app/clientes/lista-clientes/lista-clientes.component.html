@@ -1,0 +1,21 @@
+<p>Fecha: {{currentDate | date:'d/M/y HH:m'}}</p>
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>surname</th>
+        <th>email</th>
+        <th>age</th>
+        <th>active</th>
+        <th>zip</th>
+    </tr>
+    <tr *ngFor="let cliente of clientes">
+        <td>{{cliente._id}}</td>
+        <td>{{cliente.name}}</td>
+        <td>{{cliente.surname}}</td>
+        <td>{{cliente.email}}</td>
+        <td>{{cliente.age}}</td>
+        <td>{{cliente.active}}</td>
+        <td>{{cliente.zip}}</td>
+    </tr>
+</table>

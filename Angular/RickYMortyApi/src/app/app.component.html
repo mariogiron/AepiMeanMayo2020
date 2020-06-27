@@ -1,0 +1,15 @@
+<div class="botones">
+  <button (click)="cambiarPagina(false)" [disabled]="paginaActual === 1">Anterior</button>
+  <button (click)="cambiarPagina(true)" [disabled]="paginaActual === numPaginas">Siguiente</button>
+</div>
+<p>Página Actual: {{ paginaActual }}</p>
+<div class="personajes">
+  <div class="personaje" *ngFor="let personaje of personajes">
+    <h3 [ngClass]="{ vivo: (personaje.status === 'Alive'), muerto: (personaje.status === 'Dead') }">
+      {{ personaje.name }}
+    </h3>
+    <img [src]="personaje.image" alt="">
+    <p>{{ personaje.location.name }}</p>
+    <p>{{ personaje.species }}</p>
+  </div>
+</div>
