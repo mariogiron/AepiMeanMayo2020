@@ -1,0 +1,11 @@
+<h3>{{escritor?.nombre}} {{escritor?.apellidos}}</h3>
+<img [src]="escritor?.imagen" alt="" width="300">
+<p>{{escritor?.pais}}</p>
+<div class="libros">
+    <div class="libro" *ngFor="let libro of libros">
+        <img [src]="libro.imagen" alt="">
+        <h4>{{ libro.titulo }}</h4>
+    </div>
+</div>
+
+<!-- <app-libros escritor="4"></app-libros> -->

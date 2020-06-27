@@ -4,13 +4,6 @@
         <input type="text" class="form-control" formControlName="nombre">
         {{ formulario.controls.nombre.errors | json }}
     </div>
-
-
-
-
-
-
-
     <div class="form-group">
         <label>Apellidos</label>
         <input type="text" class="form-control" formControlName="apellidos">
@@ -25,9 +18,6 @@
         </p>
     </div>
     {{formulario.controls.apellidos.errors | json}}
-
-
-
     <div class="form-group">
         <label>Edad</label>
         <input type="text" class="form-control" formControlName="edad">
@@ -36,23 +26,10 @@
             {{formulario.controls.edad.errors.edadvalidator.max}}
         </p>
     </div>
-
-
-
-
-
-
-
-
-
-
     <div class="form-group">
         <label>Email</label>
         <input type="text" class="form-control" formControlName="email">
     </div>
-
-
-
     <div class="form-group">
         <label>Dni</label>
         <input type="text" class="form-control" formControlName="dni">
@@ -60,11 +37,6 @@
             {{formulario.controls.dni.errors.dnivalidator}}
         </p>
     </div>
-
-
-
-
-
     <div class="form-group">
         <label>Password</label>
         <input type="password" class="form-control" formControlName="password">
@@ -73,6 +45,9 @@
         <label>Repite Password</label>
         <input type="password" class="form-control" formControlName="repite_password">
     </div>
+    <p class="error" *ngIf="formulario.errors?.passwordvalidator">
+        {{ formulario.errors.passwordvalidator }}
+    </p>
     <input type="submit" value="Enviar" class="btn btn-block btn-info" [disabled]="formulario.invalid">
 </form>
 <p>VALID: {{ formulario.valid }}</p>

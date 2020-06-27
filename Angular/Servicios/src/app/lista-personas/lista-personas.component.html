@@ -1,0 +1,10 @@
+<div class="botones">
+    <button (click)="onClickTodas()">Todas</button>
+    <button (click)="onClickActivas()">Activas</button>
+    <button (click)="onClickAgregar()">Agregar</button>
+</div>
+<ul>
+    <li *ngFor="let persona of personas">
+        {{ persona.nombre }}
+    </li>
+</ul>

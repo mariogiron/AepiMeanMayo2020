@@ -2,12 +2,12 @@
  * 
  * TODO: 
  * - Validar la password repetida (validaciones generales del formulario)
- * - Observar los cambios sobre un campo en concreto
  * 
  */
 
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators'
 
 @Component({
   selector: 'app-model',
@@ -39,14 +39,29 @@ export class ModelComponent implements OnInit {
       ]),
       password: new FormControl(),
       repite_password: new FormControl()
-    });
+    }, [this.passwordValidator]);
   }
 
   ngOnInit(): void {
+    const emailControl = this.formulario.controls.email;
+    emailControl.valueChanges.pipe(debounceTime(1000)).subscribe(value => {
+      console.log(value);
+    });
   }
 
   onSubmit() {
     console.log(this.formulario.value);
+  }
+
+  passwordValidator(form) {
+    const passwordValue = form.controls.password.value;
+    const passwordRepeatValue = form.controls.repite_password.value;
+
+    if (passwordValue === passwordRepeatValue) {
+      return null;
+    } else {
+      return { passwordvalidator: 'Las contraseñas no coinciden' };
+    }
   }
 
   edadValidator(control) {
